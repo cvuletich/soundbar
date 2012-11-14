@@ -43,25 +43,25 @@ var soundbar = {
     $('body').append(bar);
     for (var key in soundbar.sounds) {
       var html = $('<span>' + key + '</span>').css({
-        '-moz-box-shadow' : 'inset 0px 1px 0px 0px #ffffff',
-        '-webkit-box-shadow' : 'inset 0px 1px 0px 0px #ffffff',
-        'box-shadow' : 'inset 0px 1px 0px 0px #ffffff',
-        'cursor' : 'pointer',
         'background-color' : '#ededed',
-        '-moz-border-radius' : '6px',
-        '-webkit-border-radius' : '6px',
-        'border-radius' : '6px',
         'border' : '1px solid #dcdcdc',
-        'display' : 'inline-block',
+        'border-radius' : '6px',
+        'box-shadow' : 'inset 0px 1px 0px 0px #ffffff',
         'color' : '#777777',
+        'cursor' : 'pointer',
+        'display' : 'inline-block',
         'font-family' : 'arial',
         'font-size' : '13px',
         'font-weight' : 'bold',
+        'margin-top' : '4px',
         'padding' : '6px 24px',
         'text-decoration' : 'none',
         'text-shadow' : '1px 1px 0px #ffffff',
-        'margin-top' : '4px',
-        'width' : '140px'
+        'width' : '140px',
+        '-moz-box-shadow' : 'inset 0px 1px 0px 0px #ffffff',
+        '-webkit-box-shadow' : 'inset 0px 1px 0px 0px #ffffff',
+        '-moz-border-radius' : '6px',
+        '-webkit-border-radius' : '6px'
       }).click(function() {
         soundbar.play(key);
       });
