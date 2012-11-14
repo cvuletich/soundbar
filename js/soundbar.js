@@ -63,8 +63,8 @@ var soundbar = {
         '-moz-border-radius' : '6px',
         '-webkit-border-radius' : '6px'
       }).click(function() {
-        soundbar.play(key);
-      });
+        soundbar.play($(this).data('file'));
+      }).data('file', soundbar.sounds[key]);
       $(bar).append(html);
     }
     var close = $('<div>Close Soundbar</div>')
@@ -75,13 +75,12 @@ var soundbar = {
         'font-size' : '11px',
         'left' : '5px',
         'position' : 'absolute'
-      })
-      .click(function() { soundbar.close(); });
+      }).click(function() { soundbar.close(); });
     $(bar).append(close);
   },
   play : function(key) {
     $('audio').remove();
-    var audio = $('<audio id="audio" src="' + audiopath + soundbar.sounds[key] + '"></audio>');
+    var audio = $('<audio id="audio" src="' + audiopath + key + '"></audio>');
     $('#soundbar').append(audio);
     document.getElementById('audio').play();
   },
