@@ -1,4 +1,4 @@
-var audiopath = 'http://localhost/php/soundbar/audio/';
+var audiopath = 'http://localhost/soundbar/audio/';
 
 (function(){
 	var v = "1.8.2";
@@ -35,6 +35,7 @@ var soundbar = {
       'border-left' : '1px solid #666',
       'font-family' : 'arial',
       'height' : $(window).height(),
+      'overflow-y' : 'scroll',
       'right' : 0,
       'position' : 'absolute',
       'top' : 0,
@@ -57,7 +58,7 @@ var soundbar = {
         'padding' : '6px 24px',
         'text-decoration' : 'none',
         'text-shadow' : '1px 1px 0px #ffffff',
-        'width' : '140px',
+        'width' : '100px',
         '-moz-box-shadow' : 'inset 0px 1px 0px 0px #ffffff',
         '-webkit-box-shadow' : 'inset 0px 1px 0px 0px #ffffff',
         '-moz-border-radius' : '6px',
